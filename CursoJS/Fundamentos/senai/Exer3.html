@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Montanha russa requisitos</title>
+
+        <button onclick="requisitos()">Quero ir na montanha russa</button>
+        <script>
+            
+            function requisitos() {
+                //<p>pp</p>    
+                var idade = prompt("Informe your idade")
+                var altura = prompt("Informe your altura")
+
+                //if((idade >= 12) && (altura >= 150)){
+                //    document.write("Let's go my kid")
+                //} else{
+                //    document.write("Sua altura ou idade ou os dois não estão de acordo com a norma")
+                //}
+
+            if(idade != null && altura != null ){
+                var verialtura = true
+                var veriidade = true
+                if(idade >= 12){
+                    veriidade = true
+
+                }else{veriidade = false}
+
+                if(altura >= 120){
+                    verialtura = true
+
+                }else{verialtura = false}
+
+                if (veriidade == true && verialtura == true){
+                    document.write("Let's go my kid")
+                }
+                if (veriidade == false && verialtura == true){
+                    document.write("Sua altura está no requisito mas a idade não")
+                }
+                if (veriidade == true && verialtura == false){
+                    document.write("Sua idade está no requisito mas a altura não")
+                }
+            }else {document.write("Preencha todos os dados please")}
+            }
+
+
+        </script>
+
+    </head>
+</html>
