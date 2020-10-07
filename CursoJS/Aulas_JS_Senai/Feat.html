@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Montanha russa requisitos</title>
+    </head>
+    <body>
+        <h1>usando Fetch</h1>  
+    <script type="text/javascript">
+    function Listar(){
+        console.log('usando Fetch')
+        fetch('http://localhost:5000/api/filmes')
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data)
+        })
+    }
+
+
+    </script>
+    </body>
+</html>
