@@ -3,6 +3,7 @@ import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/Index';
 import '../../assets/style/global.css'; 
 import Input from '../../Components/input';
+import './style.css';
 
 function Login() {
   return (
@@ -13,6 +14,7 @@ function Login() {
           <h1>Login</h1>
           <Input name="emai" label="E-mail" type="email" />
           <Input name="senha" label="Senha" type="password" />
+          <button  > Enviar </button>
         </div>
       </div>
       <Footer/>

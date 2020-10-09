@@ -3,3 +3,32 @@
     justify-content: space-between;
 }
 
+.secunds img{
+     width: 15%;
+     margin: 0px 0px 20px 30px;
+}
+
+.secunds p{
+    font-size: 15px;
+    margin:0px 30px 10px 30px;
+}
+
+.secunds h3{
+    margin:0px 0px 20px 30px;
+}
+
+.secunds{
+    margin: 120px;
+}
+
+.first p{
+    font-size: 15px;
+    margin:0px 30px 10px 30px;
+}
+
+.first  h2{
+    margin:0px 10px 10px 10px;
+    text-align: center;
+}
+
+

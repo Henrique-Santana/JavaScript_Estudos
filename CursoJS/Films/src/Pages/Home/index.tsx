@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import Header from '../../Components/Header/index';
 import Footer from '../../Components/Footer/Index';
-import imgCinema from '../../assets/images/cinema.png';
+import imgCinema from '../../assets/images/cinema.png'
 import imgCategoria from '../../assets/images/theater.png';
 import { Link } from 'react-router-dom';
 import './style.css';
