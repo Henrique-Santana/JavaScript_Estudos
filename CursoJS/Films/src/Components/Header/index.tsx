@@ -6,7 +6,8 @@ import './style.css';
 import {Link} from 'react-router-dom';
 
 interface HeaderProps{
-  description: string; 
+  description: string;  //props obrigatoria(Ã tem o ?)
+  Text?: string; //Props obrigatória(Tem o ?)
 }
 
 const Header:React.FunctionComponent<HeaderProps> =(props) => {
@@ -23,6 +24,8 @@ const Header:React.FunctionComponent<HeaderProps> =(props) => {
             </ul>
           </nav>
           <h3>{props.description}</h3>
+          {props.children}
+          {props.Text && <p>{props.Text}</p>}
         </div>
       </div>
     </div>
