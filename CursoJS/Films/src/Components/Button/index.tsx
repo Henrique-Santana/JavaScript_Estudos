@@ -1,19 +1,17 @@
 import React from 'react';
 
 interface ButtonProps{
-    onClick:any;
     value: string;
 
 }
 
-const Button:React.FC<ButtonProps>= ({onClick, value})=>{
+const Button:React.FC<ButtonProps>= ({value})=>{
     return(
-        <div className="btn">
-            <button onClick={onClick}>
-                {value}
-            </button>
+        <div >
+            <input className="button" type="submit"  value={value} />
         </div>
     )
 }
+
 
 export default Button;

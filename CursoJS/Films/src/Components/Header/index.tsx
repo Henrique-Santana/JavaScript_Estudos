@@ -10,6 +10,7 @@ interface HeaderProps{
   Text?: string; //Props obrigatória(Tem o ?)
 }
 
+
 const Header:React.FunctionComponent<HeaderProps> =(props) => {
   return (
     <div className="principal">

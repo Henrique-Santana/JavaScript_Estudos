@@ -5,10 +5,43 @@ import '../../assets/style/global.css';
 import Input from '../../Components/input';
 import './style.css';
 import Button from '../../Components/Button';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
 
-  const [cont,setCont] = useState(0);
+  let history = useHistory();
+
+  const [email,setEmail] = useState('');
+  const [senha,setSenha] = useState('');
+
+  const login = () =>{
+    const login ={
+      email: email,
+      senha: senha
+    }
+  
+
+  fetch('http://localhost:5000/api/login', {
+    method: 'POST',
+    body: JSON.stringify(login),
+    headers:{
+      'content-type':'application/json'
+    }
+  })
+  .then (response => response.json())
+  .then (dados =>{
+    if(dados.token !== undefined || dados.token !== null || dados.token !== ' '){
+      localStorage.setItem('token-filmes',dados.token)
+      history.push('/')
+    }
+    else{
+      alert('Senha ou Email incorretos! Tente novamente! :(')
+    }
+
+  })
+  .catch(err=>console.error(err))
+}
+
 
   return (
     <div >
@@ -18,11 +51,15 @@ function Login() {
       <div className="centro">
         <div className="login">
           <h1>Login</h1>
-          <Input name="emai" label="E-mail" type="email" />
-          <Input name="senha" label="Senha" type="password" />
+          <form onSubmit={ event=>{
+            event.preventDefault();
+            login();
+          }}>
+          <Input name="emai" label="E-mail" onChange={e=>setEmail(e.target.value)} />
+          <Input type="password" name="senha" label="Senha" onChange={e=>setSenha(e.target.value)} />
 
-          <Button onClick={() => setCont(cont + 1)} value="Enviar"/>
-          <p>Você clicou {cont}</p>
+          <Button value="Enviar"/>
+          </form>
         </div>
       </div>
       <Footer/>

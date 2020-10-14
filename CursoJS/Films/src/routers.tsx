@@ -10,7 +10,13 @@ function Routers(){
         <Route path="/" exact component={Home}/>
         <Route path="/Login" component={Login}/>
         <Route path="/Cadastro" component={Cadastro}/>
+        {/*<Route path="/Perfil" component={Perfil}/>*/}
+        {/*<Route path="/Filmes" component={Filmes}/>*/}
+        {/*<Route path="/Genero" component={Genero}/>*/}
+
         </BrowserRouter>
+
+        
     )
 }
 
