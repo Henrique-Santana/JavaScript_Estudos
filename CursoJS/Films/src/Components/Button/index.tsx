@@ -8,7 +8,8 @@ interface ButtonProps{
 const Button:React.FC<ButtonProps>= ({value})=>{
     return(
         <div >
-            <input className="button" type="submit"  value={value} />
+            <button 
+            className="button" type="submit"  value={value} />
         </div>
     )
 }

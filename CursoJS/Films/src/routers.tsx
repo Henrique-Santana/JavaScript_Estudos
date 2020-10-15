@@ -3,6 +3,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Cadastro from './Pages/Cadastro';
 import Home from './Pages/Home/index';
 import Login from './Pages/Login/index';
+import Genero from './Pages/Genero/index';
 
 function Routers(){
     return(
@@ -12,7 +13,7 @@ function Routers(){
         <Route path="/Cadastro" component={Cadastro}/>
         {/*<Route path="/Perfil" component={Perfil}/>*/}
         {/*<Route path="/Filmes" component={Filmes}/>*/}
-        {/*<Route path="/Genero" component={Genero}/>*/}
+        <Route path="/Genero" component={Genero}/>
 
         </BrowserRouter>
 

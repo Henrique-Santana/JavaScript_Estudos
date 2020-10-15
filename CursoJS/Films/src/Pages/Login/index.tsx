@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 function Login() {
 
-  let history = useHistory();
+  const history = useHistory();
 
   const [email,setEmail] = useState('');
   const [senha,setSenha] = useState('');
@@ -30,7 +30,8 @@ function Login() {
   })
   .then (response => response.json())
   .then (dados =>{
-    if(dados.token !== undefined || dados.token !== null || dados.token !== ' '){
+    //console.log("TOKEN", typeof dados.token , !!dados.token, dados.token)
+    if(dados.token){
       localStorage.setItem('token-filmes',dados.token)
       history.push('/')
     }
