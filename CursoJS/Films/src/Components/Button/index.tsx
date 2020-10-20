@@ -1,14 +1,15 @@
 import React from 'react';
+import './style.css';
 
 interface ButtonProps{
     value: string;
 
 }
 
-const Button:React.FC<ButtonProps>= ({value})=>{
+const Button:React.FunctionComponent<ButtonProps>= ({value})=>{
     return(
         <div >
-            <button 
+            <input   
             className="button" type="submit"  value={value} />
         </div>
     )

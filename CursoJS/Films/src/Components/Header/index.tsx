@@ -31,8 +31,8 @@ const menu = () => {
   } else{return(
     <ul className="menu">
       <li><Link to="/" className="link">Home</Link> </li>
-      <li><Link to ="/genero" className="link">genero</Link> </li>
-      <li><Link to="/cadastro" className="link">Cadastro</Link> </li>
+      <li><Link to ="/genero" className="link">Gênero</Link> </li>
+      <li><Link to ="/filmes" className="link">Filmes</Link> </li>
       <li><Link to="" onClick={event => {
         event.preventDefault();
         logout()}}>Loguout</Link></li>
