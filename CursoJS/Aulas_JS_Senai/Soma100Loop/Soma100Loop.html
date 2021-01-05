@@ -7,31 +7,24 @@
             <script>
                 function Soma(idade){
                     var NumX = prompt("Digite o Primeiro valor(Numero)")
-                    // var NumY = prompt("Digite o segundo valor(Numeor)")
-
-                    let validarX = Number.isInteger(NumX)
-                    document.write(validarX)
-                    
-
-                    // if(validarX = true){
-                    //     document.write("Funfo")
-                    // } else{document.write("Ver")}
+                    var NumY = prompt("Digite o segundo valor(Numeor)")
+                    validarValores(NumX, NumY)
 
                     function validarValores(NumX, NumY){
-                        var validarX = Number.isInteger(NumX)
-                        if(validarX = true){
+                        var validarY = parseInt(NumY, 10)
+                        var validarX = parseInt(NumX, 10)
+
+                        var nXn = isNaN(validarX);
+                        var nYn = isNaN(validarY);
+
+                        if(nXn !== true && nYn !== true){
                             document.write("Funfo")
+                            document.write(validarX,validarY)
+                        } else{
+                            document.write("Digite Numero Validaos")
                         }
-                        
                     }
 
-                    // if(NumX = null)
-
-                    // if(idade >= 18){
-                    //     document.write("Toma, vai encher a cara")
-                    // } else {
-                    //     document.write("Sai daqui ")
-                    // }
                 }
             </script>
 
